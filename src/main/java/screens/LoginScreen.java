@@ -2,6 +2,7 @@ package screens;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import models.User;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginScreen extends ScreenBase{
@@ -30,25 +31,32 @@ public class LoginScreen extends ScreenBase{
 
         should(emailEditText, 20);
         type(emailEditText, email);
-
         return this;
     }
-
 
 
     public LoginScreen fillPassword(String password){
 
         type(passwordEditText, password);
-
         return this;
     }
 
 
-
     public WizardScreen clickLoginButton(){
 
+        hideKeyBoard();
         loginButton.click();
         return new WizardScreen(driver);
+    }
+
+
+// ******************    Home Work    ******************
+    public void complexLogin(User user){
+
+        fillEmail(user.getEmail());
+        fillPassword(user.getPassword());
+        clickLoginButton();
+
     }
 
 

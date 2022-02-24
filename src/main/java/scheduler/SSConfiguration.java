@@ -28,9 +28,9 @@ public class SSConfiguration {
     public void setUp() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "MyAlex");
+        capabilities.setCapability("deviceName", "Nex");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "8.0");
+        capabilities.setCapability("platformVersion", "8.1");
         capabilities.setCapability("appPackage", "com.example.svetlana.scheduler");
         capabilities.setCapability("appActivity", ".presentation.splashScreen.SplashScreenActivity");
         capabilities.setCapability("automationName", "Appium");
@@ -42,7 +42,7 @@ public class SSConfiguration {
 
     @AfterSuite
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 
 }
