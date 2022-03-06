@@ -1,9 +1,7 @@
-package screens;
+package schedulerscreens;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import lombok.extern.java.Log;
-import models.User;
 import org.openqa.selenium.support.FindBy;
 
 public class SplashScreen extends ScreenBase{
@@ -23,7 +21,7 @@ public class SplashScreen extends ScreenBase{
 
 
     public LoginScreen checkVersion(String version){
-        shouldHave(versionTextView,version,10);
+        shouldHave(versionTextView,version,50);
         return new LoginScreen(driver);
     }
 
